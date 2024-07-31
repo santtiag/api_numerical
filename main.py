@@ -2,10 +2,27 @@ from fastapi import FastAPI, HTTPException, Query
 import requests
 from starlette.responses import JSONResponse
 from fastapi.encoders import jsonable_encoder
+from fastapi.middleware.cors import CORSMiddleware
 
 
 app = FastAPI()
 app.title = 'Numerical Project'
+
+origins = [
+    "http://localhost.tiangolo.com",
+    "https://localhost.tiangolo.com",
+    "http://localhost",
+    "http://localhost:8080",
+]
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=origins,
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
 URL = '/home/'
 
 # INFO: The path that u need to change to the ulr -> 'url_ngrok/engine/'
