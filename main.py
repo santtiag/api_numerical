@@ -10,6 +10,7 @@ app.title = 'Numerical Project'
 
 origins = [
     "https://api-numerical.onrender.com",
+    "http://localhost:3000"
 ]
 
 app.add_middleware(
