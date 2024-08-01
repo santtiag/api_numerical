@@ -27,7 +27,7 @@ URL = '/home/'
 
 # INFO: The path that u need to change to the ulr -> 'url_ngrok/engine/'
 # URL_ENGINE = 'http://localhost:5000/engine/'
-URL_ENGINE = 'https://dd8c-2800-e2-c180-5c6-00-3.ngrok-free.app/engine/'
+URL_ENGINE = 'https://572f-181-130-217-21.ngrok-free.app/engine/'
 
 @app.get('/home', tags=['Home'])
 def print():
